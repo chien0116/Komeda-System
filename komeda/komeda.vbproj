@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85B27ED5-7C66-4F8C-B926-8F6A56FF5428}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>komeda.My.MyApplication</StartupObject>
+    <RootNamespace>komeda</RootNamespace>
+    <AssemblyName>komeda</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>komeda.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>komeda.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OleDb, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.7.0.0\lib\net462\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Reports\Profit.Designer.vb">
+      <DependentUpon>Profit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Profit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="點餐\Pay.Designer.vb">
+      <DependentUpon>Pay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="點餐\Pay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\TradeReport.Designer.vb">
+      <DependentUpon>TradeReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TradeReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ChooseReport.Designer.vb">
+      <DependentUpon>ChooseReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChooseReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PurchaseReport.Designer.vb">
+      <DependentUpon>PurchaseReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PurchaseReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="點餐\DelOrder.Designer.vb">
+      <DependentUpon>DelOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="點餐\DelOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuManage\ChangeMenu.Designer.vb">
+      <DependentUpon>ChangeMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuManage\ChangeMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuManage\Searchfood.Designer.vb">
+      <DependentUpon>Searchfood.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuManage\Searchfood.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="進貨\SupplierInterface.Designer.vb">
+      <DependentUpon>SupplierInterface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="進貨\SupplierInterface.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="進貨\SupplierLogin.Designer.vb">
+      <DependentUpon>SupplierLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="進貨\SupplierLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuManage\AddMenuClass.Designer.vb">
+      <DependentUpon>AddMenuClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuManage\AddMenuClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuManage\DelFood.Designer.vb">
+      <DependentUpon>DelFood.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuManage\DelFood.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuManage\MenuManage.Designer.vb">
+      <DependentUpon>MenuManage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuManage\MenuManage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="點餐\TableChoose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="點餐\TableChoose.Designer.vb">
+      <DependentUpon>TableChoose.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeManage\AddStore.Designer.vb">
+      <DependentUpon>AddStore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storeManage\AddStore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageInterface.Designer.vb">
+      <DependentUpon>ManageInterface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageInterface.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="進貨\PurchaseNew.Designer.vb">
+      <DependentUpon>PurchaseNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="進貨\PurchaseNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.vb">
+      <DependentUpon>StartForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="點餐\Order.Designer.vb">
+      <DependentUpon>Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="點餐\Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeManage\StoreManage.Designer.vb">
+      <DependentUpon>StoreManage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storeManage\StoreManage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeManage\AddStoreClass.Designer.vb">
+      <DependentUpon>AddStoreClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storeManage\AddStoreClass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeManage\ChangeStore.Designer.vb">
+      <DependentUpon>ChangeStore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storeManage\ChangeStore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeManage\Delete.Designer.vb">
+      <DependentUpon>Delete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storeManage\Delete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeManage\SearchStore.Designer.vb">
+      <DependentUpon>SearchStore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storeManage\SearchStore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Profit.resx">
+      <DependentUpon>Profit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="點餐\Pay.resx">
+      <DependentUpon>Pay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TradeReport.resx">
+      <DependentUpon>TradeReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChooseReport.resx">
+      <DependentUpon>ChooseReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PurchaseReport.resx">
+      <DependentUpon>PurchaseReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="點餐\DelOrder.resx">
+      <DependentUpon>DelOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuManage\ChangeMenu.resx">
+      <DependentUpon>ChangeMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuManage\Searchfood.resx">
+      <DependentUpon>Searchfood.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="進貨\SupplierInterface.resx">
+      <DependentUpon>SupplierInterface.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuManage\AddMenuClass.resx">
+      <DependentUpon>AddMenuClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuManage\DelFood.resx">
+      <DependentUpon>DelFood.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuManage\MenuManage.resx">
+      <DependentUpon>MenuManage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="進貨\SupplierLogin.resx">
+      <DependentUpon>SupplierLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="點餐\TableChoose.resx">
+      <DependentUpon>TableChoose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeManage\AddStore.resx">
+      <DependentUpon>AddStore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageInterface.resx">
+      <DependentUpon>ManageInterface.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="進貨\PurchaseNew.resx">
+      <DependentUpon>PurchaseNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="點餐\Order.resx">
+      <DependentUpon>Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeManage\StoreManage.resx">
+      <DependentUpon>StoreManage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeManage\AddStoreClass.resx">
+      <DependentUpon>AddStoreClass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeManage\ChangeStore.resx">
+      <DependentUpon>ChangeStore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeManage\Delete.resx">
+      <DependentUpon>Delete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeManage\SearchStore.resx">
+      <DependentUpon>SearchStore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KEYEID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MANAGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\存庫管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\刪除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\刪除訂單.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\刪除餐點.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\身分證.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\身分證ID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\供應商.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\刷新.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\房型.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\房間資訊.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\招牌.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\信箱.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查詢.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查詢存貨.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查詢餐點.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\盈餘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\訂房.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\訂房1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\訂房2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\訂房3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\訂房資訊.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\重整.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改存貨.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改餐點.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\員工.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\員工介面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\員工介面1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退房.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\報表介面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\報廢.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\報廢存貨.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登錄.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\菜單管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\進貨介面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\進貨紀錄.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\開始搜尋.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\開始搜尋1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\開始搜尋2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\開始搜尋3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新增存貨.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新增品項.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新餐品項.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\電子信箱 %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\電子信箱.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\價格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\價格1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2819%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2820%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2821%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡 %2822%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱咖啡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\確定.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\銷售紀錄.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\選擇.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\選擇1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\點餐頁面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\歡迎.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\歡迎登入 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\管理頁面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\返回.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新增.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\確定1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
